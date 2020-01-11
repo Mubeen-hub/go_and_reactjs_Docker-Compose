@@ -1,0 +1,10 @@
+- hosts: masters
+  become: yes
+  tasks:
+
+   - name: Clone the git
+     shell: git clone https://github.com/shamirgoawala/jenkins_home.git
+     args:
+      chdir: /home/jenkins/group4
+      state: directory
+      mode: 1000

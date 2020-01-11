@@ -1,0 +1,43 @@
+- hosts: masters
+  become: yes
+  tasks:
+
+
+   - name: Clone the git
+     shell: git clone https://github.com/Mubeen-hub/devops1.git
+     args:
+       chdir: /home/jenkins/
+
+   - name: Clone jenkins home from git
+     shell: git clone https://github.com/shamirgoawala/jenkins_home.git
+     args:
+       chdir: /home/jenkins/
+
+
+#   - name: Make jenkins home directory
+#     file:
+#       path: /home/jenkins/devops/jenkins_home
+#       state: directory
+#       owner: shamir
+#       group: root
+#       mode: 1000
+
+   - name: Set docker service
+     shell:
+       cmd: usermod -aG docker $USER -b
+       cmd: service docker restart -b
+     become: True
+
+
+   - name: Install Jenkins from docker
+     shell:
+       cmd: docker pull jenkins/jenkins:lts
+       cmd: docker run -d --name group-4-jenkins -p 9090:8080 -p 50000:50000 -v /var/jenkins_home jenkins/jenkins:lts
+       #cmd: docker start group-4-jenkins
+
+
+       
+#       cmd: sudo su - shamir
+#       become_user: ubuntu 
+       
+

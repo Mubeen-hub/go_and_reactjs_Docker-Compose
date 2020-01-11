@@ -1,0 +1,29 @@
+- hosts: all
+  become: yes
+  tasks:
+   - name: install docker-compose
+     apt:
+      name: docker-compose
+      state: present
+
+   - name: install open-jdk-8
+     apt:
+      name: openjdk-8-jdk
+      state: present
+      force: yes
+
+   - name: install tree
+     apt:
+      name: tree
+      state: present
+      force: yes
+
+
+#- hosts: devops1
+#  become: yes
+#  tasks:
+#   - name: install open-jdk-8
+#     apt:
+#       name: openjdk-8-jdk
+#       state: present
+#       force: yes

@@ -1,0 +1,17 @@
+- hosts: masters
+  become: yes
+  tasks:
+
+#   - name: sudo shamir
+#     shell: su - shamir
+#       cmd: su - shamir
+#     become: True
+#     become_method: su
+  
+   - name: docker compose up
+     shell: docker-compose up -d
+     args:
+       chdir: /home/jenkins/devops1/
+     become: True         
+        
+#       chdir: sir-project/
