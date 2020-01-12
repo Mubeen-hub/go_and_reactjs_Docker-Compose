@@ -3,7 +3,7 @@ services:
     frontend:
         container_name: reactjs_frontend
         build:
-            context: ./client
+            context:  ./client
             dockerfile: Dockerfile
         image: reactjsaa
         ports:
