@@ -22,7 +22,7 @@ func enableCors(w *http.ResponseWriter) {
 }
 func handleRequests(){
   http.HandleFunc("/", homePage)
-  log.Fatal(http.ListenAndServe(":8080", nil))
+  log.Fatal(http.ListenAndServe(":8081", nil))
 
 }
 
