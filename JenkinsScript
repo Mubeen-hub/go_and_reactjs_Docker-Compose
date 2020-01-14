@@ -1,0 +1,18 @@
+pipeline {
+   agent any
+   stages {
+      stage('Clone Data from git') {
+         steps {
+            sh "sudo rm -rf devops1"
+            sh "git clone https://github.com/Mubeen-hub/devops1.git"
+         }
+      }
+      stage('start the project '){
+       steps {
+           dir('devops1'){
+            sh "sudo docker-compose up -d"   
+           }
+       }   
+      }
+   }
+}
