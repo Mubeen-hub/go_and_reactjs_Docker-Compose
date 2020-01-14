@@ -9,3 +9,4 @@ it also contains main.go which will create api for client
 docker-compose.yml will use both client and server Dockerfile to run them on same docker virtual network at once
 to run all this simply run  <br>
 <b> docker-compose up <b>
+...
