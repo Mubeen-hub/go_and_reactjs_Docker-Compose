@@ -4,7 +4,7 @@ RUN mkdir -p /usr/src/app
 
 WORKDIR /usr/src/app
 
-EXPOSE 8081
+EXPOSE 8082
 
 CMD [ "npm", "start" ]
 
