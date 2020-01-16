@@ -10,7 +10,7 @@ constructor() {
   }
 
    componentDidMount() {
-    fetch("http://100.26.185.156:8081/",{
+    fetch("http://18.204.201.19:8081/",{
     method: "GET", //http://100.26.185.156:8081/
     headers:{
     }})
@@ -30,7 +30,7 @@ constructor() {
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h2>{this.state.value} Pipeline :O !!</h2>
+          <h2>{this.state.value} Secured !!</h2>
         </div>
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
