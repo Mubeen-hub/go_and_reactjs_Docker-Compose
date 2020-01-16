@@ -7,7 +7,7 @@ services:
             dockerfile: Dockerfile
         image: reactjsaa
         ports:
-            - "80:80"
+            - "8082:8082"
         volumes:
             - ./client:/usr/src/app
         depends_on:
