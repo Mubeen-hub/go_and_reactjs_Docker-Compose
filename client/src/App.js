@@ -10,7 +10,7 @@ constructor() {
   }
 
    componentDidMount() {
-    fetch("http://18.204.201.19:8081/",{
+    fetch("http://54.165.127.56:8081/",{
     method: "GET", //http://100.26.185.156:8081/
     headers:{
     }})
